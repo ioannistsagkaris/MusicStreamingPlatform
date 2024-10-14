@@ -79,7 +79,7 @@ export default function Library() {
             >
               <View style={styles.songInnerContainer}>
                 <Image
-                  source={{ uri: `http://192.168.1.5:3000/media/${song.albums.image}` }}
+                  source={{ uri: `http://192.168.1.25:3000/media/${song.albums.image}` }}
                   style={styles.albumImage}
                   defaultSource={require("../assets/Songs/default.png")}
                   resizeMode="cover"

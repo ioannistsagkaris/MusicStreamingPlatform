@@ -70,7 +70,7 @@ export default function Player() {
           <View style={styles.imageContainer}>
             {onCurrentSong?.currentSong ?
               <Image
-                source={{ uri: `http://192.168.1.5:3000/media/${onCurrentSong?.currentSong.albums.image}` }}
+                source={{ uri: `http://192.168.1.25:3000/media/${onCurrentSong?.currentSong.albums.image}` }}
                 style={styles.albumImage}
                 defaultSource={require("../assets/Songs/default.png")}
                 resizeMode="cover"

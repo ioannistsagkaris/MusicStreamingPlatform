@@ -43,7 +43,7 @@ export default function MusicPlayer() {
             <TouchableOpacity style={styles.musicPlayer} onPress={() => navigation.navigate("Player")} activeOpacity={0.7}>
                 {onCurrentSong?.currentSong ?
                     <Image
-                        source={{ uri: `http://192.168.1.5:3000/media/${onCurrentSong?.currentSong.albums.image}` }}
+                        source={{ uri: `http://192.168.1.25:3000/media/${onCurrentSong?.currentSong.albums.image}` }}
                         style={styles.musicPlayerImage}
                         defaultSource={require("../assets/Songs/default.png")}
                         resizeMode="cover"

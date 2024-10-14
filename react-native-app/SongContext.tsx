@@ -42,10 +42,10 @@ interface SongsProps {
     durationMillis: number;
 }
 
-export const URL_SONG = "http://192.168.1.5:3000/song/getSongs";
-export const URL_LIKEDSONG = "http://192.168.1.5:3000/auth/getLikedSongs";
-export const URL_SEARCH = "http://192.168.1.5:3000/song/getSearchSongs";
-export const URL_GENRE = "http://192.168.1.5:3000/song/getGenreSongs";
+export const URL_SONG = "http://192.168.1.25:3000/song/getSongs";
+export const URL_LIKEDSONG = "http://192.168.1.25:3000/auth/getLikedSongs";
+export const URL_SEARCH = "http://192.168.1.25:3000/song/getSearchSongs";
+export const URL_GENRE = "http://192.168.1.25:3000/song/getGenreSongs";
 
 const SongContext = createContext<SongsProps>({
     positionMillis: 0,
@@ -227,7 +227,7 @@ export const SongProvider = ({ children }: any) => {
             });
 
             const { sound: newSound } = await Audio.Sound.createAsync(
-                { uri: `http://192.168.1.5:3000/media/${songPath}` },
+                { uri: `http://192.168.1.25:3000/media/${songPath}` },
                 { shouldPlay: true, isLooping: isLooping?.loop, shouldCorrectPitch: true },
             );
 
