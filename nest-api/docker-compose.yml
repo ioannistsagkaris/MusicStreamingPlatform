@@ -1,0 +1,12 @@
+version: "4.28.0"
+services:
+  AA-db:
+    image: postgres:15
+    ports:
+      - "5434:5432"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 123
+      POSTGRES_DB: AudioAlcove
+networks:
+  musicstreamingplatform:
