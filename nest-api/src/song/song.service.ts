@@ -84,16 +84,11 @@ export class SongService {
 
 	async updateSong(dto: AdminDtoUpdateSong) {
 		try {
-			const newName =
-				dto.songNameNew !== (undefined || '') ? dto.songNameNew : dto.songName;
+			const newName = dto.songNameNew !== '' ? dto.songNameNew : dto.songName;
 
-			const newGenre =
-				dto.songGenreNew !== (undefined || '')
-					? dto.songGenreNew
-					: dto.songGenre;
+			const newGenre = dto.songGenreNew !== '' ? dto.songGenreNew : dto.songGenre;
 
-			const newFile =
-				dto.songFileNew !== (undefined || '') ? dto.songFileNew : dto.songFile;
+			const newFile = dto.songFileNew !== '' ? dto.songFileNew : dto.songFile;
 
 			await this.prisma.song.update({
 				where: {

@@ -56,8 +56,9 @@ export class AdminController {
 		try {
 			const songMessage = await this.songService.deleteSong(dto);
 			const albumMessage = await this.albumService.deleteAlbum(dto);
+			const artistMessage = await this.artistService.deleteArtist(dto);
 
-			return { songMessage, albumMessage };
+			return { songMessage, albumMessage, artistMessage };
 		} catch (error) {
 			throw new BadRequestException(error.response.message);
 		}

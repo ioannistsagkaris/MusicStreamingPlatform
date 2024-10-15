@@ -21,10 +21,7 @@ export class AuthController {
 		try {
 			return await this.authService.signup(dto);
 		} catch (error) {
-			if (
-				error instanceof PrismaClientKnownRequestError &&
-				error.code === 'P2002'
-			) {
+			if (error instanceof PrismaClientKnownRequestError && error.code === 'P2002') {
 				throw new ForbiddenException('*Email is already signed in!');
 			} else {
 				throw new BadRequestException(error.response.message);

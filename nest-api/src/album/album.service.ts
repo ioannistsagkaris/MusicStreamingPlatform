@@ -71,15 +71,9 @@ export class AlbumService {
 
 	async updateAlbum(dto: AdminDtoUpdateAlbum) {
 		try {
-			const newName =
-				dto.albumNameNew !== (undefined || '')
-					? dto.albumNameNew
-					: dto.albumName;
+			const newName = dto.albumNameNew !== '' ? dto.albumNameNew : dto.albumName;
 
-			const newImage =
-				dto.albumImageNew !== (undefined || '')
-					? dto.albumImageNew
-					: dto.albumImage;
+			const newImage = dto.albumImageNew !== '' ? dto.albumImageNew : dto.albumImage;
 
 			await this.prisma.album.update({
 				where: {

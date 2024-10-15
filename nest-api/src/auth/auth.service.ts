@@ -18,8 +18,7 @@ export class AuthService {
 		try {
 			const hash = await argon.hash(dto.password);
 
-			const username =
-				dto.username !== '' ? dto.username : 'user';
+			const username = dto.username !== '' ? dto.username : 'user';
 
 			const user = await this.prisma.user.create({
 				data: {
